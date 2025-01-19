@@ -8,3 +8,34 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+ :root {
+  --green-light: #8dca67;
+  --orange: #f46c3f;
+  --orange-light: #F7BE81;
+  --primary-green: #20aa64;
+  --green-dark: #2ecc71;
+  --blue-light: #8ab7f5;
+  --blue: #6091d9;
+  --gray-light: #eef1f0;
+  --gray: #b8c0c9;
+  --gray-dark: #95a5a6;
+  --black-light: #34495e;
+  --black: #000000;
+  --white: #ffffff;
+  --red: #e74c3c;
+  --blue-dark: #1F3A93;
+  --text-gray: #848484
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--gray-light);
+  color: var(--black);
+  height: 100vh;
+}

@@ -1,4 +1,37 @@
-<div>
-  <h1>Home#index</h1>
-  <p>Find me in app/views/home/index.html.erb</p>
+<div class="home-screen">
+  <%= render 'partials/sidebar' %>
+  
+  <div class="cards-container">
+    <div class="card">
+      <div class="card-img">
+        <%= image_tag('gestao-financeira.png') %>
+        <p>Gestão Financeira</p>
+      </div>
+      <div class="card-text">
+        <p>Adicione entradas e saídas para ter um maior controle</p>
+        <%= link_to "Saiba mais", root_path %><br />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <%= image_tag('inteligencia-financeira.jpg') %>
+        <p>Dicas de organização</p>
+      </div>
+      <div class="card-text">
+        <p>Permita que o nosso modelo de inteligencia artificial, ajude na organização das suas dívidas</p>
+        <%= link_to "Saiba mais", root_path %><br />
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img">
+        <%= image_tag('investimento2.png') %>
+        <p>Analise de investimento</p>
+      </div>
+      <div class="card-text">
+        <p>Veja o quanto você pode economizar e investir</p>
+        <%= link_to "Saiba mais", root_path %><br />
+      </div>
+    </div>
+  </div>
+
 </div>

@@ -1,17 +1,6 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
- :root {
+:root {
   --green-light: #8dca67;
   --orange: #f46c3f;
-  --orange-light: #F7BE81;
   --primary-green: #20aa64;
   --green-dark: #2ecc71;
   --blue-light: #8ab7f5;
@@ -22,6 +11,7 @@
   --black-light: #34495e;
   --black: #000000;
   --white: #ffffff;
+  --whitesmoke: #f5f5f5;
   --red: #e74c3c;
   --blue-dark: #1F3A93;
   --text-gray: #848484
@@ -37,6 +27,118 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--gray-light);
   color: var(--black);
+}
+
+.background_box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: .7rem;
+  margin-bottom: 3rem;
+  height: 85vh;
+}
+
+.image {
+  border-radius: 10px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: .7rem;
+  width: 60%;
+  background-color: var(--whitesmoke);
+  height: 85vh;
+  box-shadow: 17px 17px 15px -4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.login_align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.login_logo {
+  width: 25%;
+}
+
+.form {
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  margin: 1rem;
+  background-color: var(--blue);
+  padding-top: 1.5rem;
+  padding-left: 2rem;
+  width: 40%;
+  height: 85vh;
+  box-shadow: 17px 17px 15px -4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+
+}
+
+.field {
+  color: var(--white);
+  font-weight: bold;
+  margin-left: 0%;
+  margin-bottom: 1rem;
+}
+
+.field input {
+  border-radius: 5px;
+  height: 2.3rem;
+  width: 85%;
+}
+
+.login_flex {
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.actions input {
+  background-color: var(--gray-light);
+  color: var(--black);
+  padding: .5rem;
+  border-radius: 5px;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.login_singup {
+  text-decoration: none;
+}
+
+.login_link {
+  color: var(--gray-light);
+  text-decoration: none;
+}
+
+.login_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.signup_button {
+  color: var(--black);
+  text-decoration: none;
+  background-color: var(--gray-light);
+  border: 1px solid  var(--black);
+  padding: .5rem;
+  border-radius: 5px;
+  font-size: medium;
   height: 100vh;
 }
 

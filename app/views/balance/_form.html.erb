@@ -1,0 +1,25 @@
+<%= form_with(url: create_balance_path, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_overdue, "Due Date" %>
+    <%= form.date_field :date_overdue %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_balance, "Movement Type" %>
+    <%= form.select :type_balance, options_for_select([['Entrada', 'E'], ['Saída', 'S']]) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Create Balance" %>
+  </div>
+<% end %>

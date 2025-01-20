@@ -6,8 +6,14 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   root to: "home#index"
   # get "/saidas", to: "expenses#index"
-  resources :expenses
   # get "/entradas", to: "incomes#index"
-  resources :incomes
   get "/dashboard", to: "dashboard#index"
+
+  get "/movimentacao", to: "balance#index", as: :balance
+  get "/movimentacao/nova", to: "balance#new", as: :new_balance
+  get "/movimentacao/editar/:id", to: "balance#edit", as: :edit_balance
+  get "/movimentacao/:id", to: "balance#show", as: :show_balance
+  patch "/movimentacao/:id", to: "balance#update", as: :update_balance
+  delete "/movimentacao/:id", to: "balance#destroy", as: :destroy_balance
+  post "/movimentacao", to: "balance#create", as: :create_balance
 end

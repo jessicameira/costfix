@@ -1,10 +1,16 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   
-  <div class="background-box">
+  <div class="background_box">
     <div class="image"> 
       <%= image_tag('tela_login.png', class:'image_tag')%>
     </div>
+    
     <div class="form"> 
+        
+        <div class="login_align">
+        <%= image_tag('logotipo.png', class: 'login_logo')%>
+        </div>
+
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>

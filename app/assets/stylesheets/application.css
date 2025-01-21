@@ -27,6 +27,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--gray-light);
   color: var(--black);
+  height: 100vh;
 }
 
 .background_box {
@@ -140,4 +141,10 @@ body {
   border-radius: 5px;
   font-size: medium;
   height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
 }

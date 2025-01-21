@@ -25,6 +25,11 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="app-container">
+      <% unless current_page?(new_user_session_path) %>
+        <%= render 'partials/sidebar' %>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,39 @@
+<div>
+  <p style="color: green"><%= notice %></p>
+  
+  <% content_for :title, "Movimentação" %>
+  
+  <h1>Movimentação</h1>
+  <%= link_to "New balance", new_balance_path %>
+  <div id="balances">
+    <% if @balance.empty? %>
+      <p>Não há movimentações cadastradas.</p>
+    <% else %>
+    <div id="statement">
+      <table>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Tipo</th>
+          <th>Data de Vencimento</th>
+          <th></th>
+        </tr>
+      <% @balance.each do |statement| %>
+        <tr>
+          <td><%= statement.description %></td>
+          <td><%= statement.amount %></td>
+          <td><%= statement.type_balance %></td>
+          <td><%= statement.date_overdue %></td>
+          <td>
+            <%= link_to "Show", show_balance_path(statement) %>
+            <%= link_to "Edit", edit_balance_path(statement) %>
+            <%= button_to "Destroy", statement, method: :delete, data: { confirm: "Are you sure?" } %>
+          </td>
+        </tr>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+  
+</div>
+

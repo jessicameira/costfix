@@ -27,4 +27,5 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--gray-light);
   color: var(--black);
+  height: 100vh;
 }

@@ -1,9 +1,3 @@
-.home-screen{
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-}
-
 .cards-container{
   display: flex;
   flex-direction: row;

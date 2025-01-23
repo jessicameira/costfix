@@ -1,4 +1,4 @@
-.login_background_box {
+.signup_background_box {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -9,12 +9,12 @@
   margin-bottom: 3rem;
 }
 
-.login_image {
+.signup_image {
   border-radius: 10px;
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-items: center;
   padding: .7rem;
   width: 60%;
   background-color: var(--whitesmoke);
@@ -22,30 +22,18 @@
   box-shadow: 17px 17px 15px -4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
-.login_image img {
-  width: 100%;
+.signup_image img {
+  width: 80%;
   height: auto;
 }
 
-
-.login_align {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-}
-
-.login_logo {
-  width: 25%;
-}
-
-.login_form {
+.signup_form {
   display: flex;
   flex-direction:column;
-  justify-content: flex-start;
+  justify-content: center;
   border-radius: 10px;
   margin: 1rem;
+  padding: 2rem;
   background-color: var(--blue);
   padding-top: 1.5rem;
   padding-left: 2rem;
@@ -54,31 +42,36 @@
   box-shadow: 17px 17px 15px -4px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
-.login_field {
+.signup_fields{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.signup_field {
   color: var(--white);
   font-weight: bold;
   margin-left: 0%;
   margin-bottom: 1rem;
 }
 
-.login_field input {
+.signup_field input {
   border-radius: 5px;
   height: 2.3rem;
   width: 85%;
 }
 
-.login_flex {
+.signup_buttons {
   display: flex;
   flex-direction: row;
-  color: var(--white);
   align-items: center;
   justify-content: space-between;
   width: 85%;
-  margin-bottom: 1.5rem;
-  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
-.login_actions input {
+
+.signup_actions input {
   background-color: var(--gray-light);
   color: var(--black);
   padding: .5rem;
@@ -87,24 +80,7 @@
   cursor: pointer;
 }
 
-.login_singup {
-  text-decoration: none;
-}
-
-.login_link {
-  color: var(--gray-light);
-  text-decoration: none;
-}
-
-.login_buttons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 85%;
-}
-
-.login_signup_button {
+.signup_login_button {
   color: var(--black);
   text-decoration: none;
   background-color: var(--gray-light);
@@ -114,3 +90,4 @@
   font-size: medium;
   height: 100vh;
 }
+

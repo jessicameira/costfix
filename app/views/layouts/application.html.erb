@@ -26,7 +26,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <div class="app-container">
-      <% unless current_page?(new_user_session_path) %>
+      <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path)%>
         <%= render 'partials/sidebar' %>
       <% end %>
       <%= yield %>

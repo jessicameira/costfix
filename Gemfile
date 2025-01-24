@@ -56,7 +56,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "pry-rails"
   gem "rubocop-performance", require: false
-  gem "rubocop-rails", "~> 2.24", ">= 2.24.1"
+  gem "rubocop-rails", "~> 2.29"
 end
 
 group :development do

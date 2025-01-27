@@ -10,13 +10,13 @@
       <p>Não há movimentações cadastradas.</p>
     <% else %>
     <div id="statement">
-      <table>
-        <tr>
+      <table class="p-2 table">
+        <tr class="table-header-group">
           <th>Descrição</th>
           <th>Valor</th>
           <th>Tipo</th>
           <th>Data de Vencimento</th>
-          <th></th>
+          <th> Ação </th>
         </tr>
       <% @balance.each do |statement| %>
         <tr>
@@ -36,4 +36,3 @@
   </div>
   
 </div>
-

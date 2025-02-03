@@ -1,38 +1,52 @@
-<div>
+<div class="flex-col flex-1">
   <p style="color: green"><%= notice %></p>
+  <%= render_breadcrumbs %>
   
   <% content_for :title, "Movimentação" %>
   
-  <h1>Movimentação</h1>
-  <%= link_to "New balance", new_balance_path %>
-  <div id="balances">
+  <h1>Movimentações</h1>
+
+  <div class="flex-col" id="balances">
     <% if @balance.empty? %>
       <p>Não há movimentações cadastradas.</p>
     <% else %>
-    <div id="statement">
-      <table class="p-2 table">
-        <tr class="table-header-group">
-          <th>Descrição</th>
-          <th>Valor</th>
-          <th>Tipo</th>
-          <th>Data de Vencimento</th>
-          <th> Ação </th>
-        </tr>
-      <% @balance.each do |statement| %>
-        <tr>
-          <td><%= statement.description %></td>
-          <td><%= statement.amount %></td>
-          <td><%= statement.type_balance %></td>
-          <td><%= statement.date_overdue %></td>
-          <td>
-            <%= link_to "Show", show_balance_path(statement) %>
-            <%= link_to "Edit", edit_balance_path(statement) %>
-            <%= button_to "Destroy", statement, method: :delete, data: { confirm: "Are you sure?" } %>
-          </td>
-        </tr>
-      <% end %>
+    <div class="flex-col" id="statement">
+      <table class="min-w-full p-2 table">
+        <thead>
+          <tr>
+            <th scope="col">Descrição</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Data de Vencimento</th>
+            <th scope="col"> Ação </th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @balance.each do |statement| %>
+          <tr>
+            <th scope="row"><%= statement.description %></td>
+            <td><%= statement.amount %></td>
+            <td><%= statement.type_balance %></td>
+            <td><%= statement.date_overdue %></td>
+            <td>
+              <%= link_to "Show", show_balance_path(statement) %>
+              <%= link_to "Edit", edit_balance_path(statement) %>
+              <%= button_to "Destroy", statement, method: :delete, data: { confirm: "Are you sure?" } %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">Saldo</th>
+            <td><%= @leftover %></td>
+          </tr>
+        </tfoot>
+      </table>
     </div>
     <% end %>
   </div>
-  
+  <div class="flex-row">
+    <%= link_to 'New Balance', new_balance_path, class: "btn btn-primary" %>
+  </div>
 </div>

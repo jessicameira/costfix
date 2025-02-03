@@ -1,8 +1,15 @@
 class BalanceController < ApplicationController
+  add_breadcrumb "home", :root_path
+  add_breadcrumb "movimentacoes", :balance_path
   before_action :authenticate_user!, only: %i[create edit update destroy]
 
   def index
     @balance = Balance.all
+    incomes = Balance.where(type_balance: "E").sum(:amount)
+    expenses = Balance.where(type_balance: "S").sum(:amount)
+    @leftover = incomes - expenses
+
+    add_breadcrumb "Inicio", root_path, title: "Voltar ao início"
   end
 
   def show

@@ -56,3 +56,5 @@ group :test do
   gem "vcr"
   gem "webmock"
 end
+
+gem "breadcrumbs_on_rails", "~> 4.1"
